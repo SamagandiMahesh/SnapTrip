@@ -1,0 +1,91 @@
+{
+    "root": "apps/snaptrip",
+    "sourceRoot": "apps/snaptrip/src",
+    "projectType": "application",
+    "targets": {
+      "build": {
+        "executor": "@nrwl/webpack:webpack",
+        "outputs": ["{options.outputPath}"],
+        "options": {
+          "deployUrl": "/snaptrip/",
+          "outputPath": "dist/apps/snaptrip",
+          "index": "apps/snaptrip/src/index.html",
+          "main": "apps/snaptrip/src/main.tsx",
+          "tsConfig": "apps/snaptrip/tsconfig.app.json",
+          "assets": [
+            "apps/snaptrip/src/favicon.ico",
+            "apps/snaptrip/src/assets"
+          ],
+          "styles": [],
+          "scripts": [],
+          "webpackConfig": "@nrwl/react/plugins/webpack"
+        },
+        "configurations": {
+          "production": {
+            "fileReplacements": [
+              {
+                "replace": "apps/snaptrip/src/environments/environment.ts",
+                "with": "apps/snaptrip/src/environments/environment.prod.ts"
+              }
+            ],
+            "deployUrl": "https://genesis.stg.pscloudhub.com/snaptrip/",
+            "optimization": true,
+            "outputHashing": "all",
+            "sourceMap": false,
+            "extractCss": true,
+            "namedChunks": false,
+            "extractLicenses": true,
+            "vendorChunk": false,
+            "budgets": [
+              {
+                "type": "initial",
+                "maximumWarning": "500kb",
+                "maximumError": "1mb"
+              }
+            ]
+          }
+        }
+      },
+      "docker": {
+        "executor": "@nx-tools/nx-docker:build",
+        "options": {
+          "file": "apps/snaptrip/Dockerfile",
+          "push": false,
+          "load": false,
+          "tags": [
+            "psregistry.pscloudhub.com/psinnersource/xt/micro-frontend/genesis/snaptrip:latest"
+          ]
+        }
+      },
+      "serve": {
+        "executor": "@nrwl/webpack:dev-server",
+        "options": {
+          "buildTarget": "snaptrip:build",
+          "hmr": true,
+          "port": 5000
+        },
+        "configurations": {
+          "production": {
+            "buildTarget": "snaptrip:build:production",
+            "hmr": false
+          }
+        }
+      },
+      "lint": {
+        "executor": "@nrwl/linter:eslint",
+        "options": {
+          "lintFilePatterns": ["apps/snaptrip/**/*.{ts,tsx,js,jsx}"]
+        },
+        "outputs": ["{options.outputFile}"]
+      },
+      "test": {
+        "executor": "@nrwl/jest:jest",
+        "outputs": ["coverage/apps/snaptrip"],
+        "options": {
+          "jestConfig": "apps/snaptrip/jest.config.js",
+          "passWithNoTests": true
+        }
+      }
+    },
+    "tags": []
+  }
