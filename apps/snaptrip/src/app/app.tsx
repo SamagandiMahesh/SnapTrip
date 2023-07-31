@@ -11,6 +11,8 @@ const StyledApp = styled.div`
   max-width: 100%;
   margin: 50px auto;
 
+
+
   .flex {
     display: flex;
     align-items: center;
@@ -24,10 +26,7 @@ const StyledApp = styled.div`
     border-radius: 3px;
   }
 
-  main {
-    padding: 0 36px;
-  }
-
+  
   p {
     text-align: center;
   }
@@ -50,6 +49,11 @@ const StyledApp = styled.div`
     justify-content: center;
     width: 100%;
     height: 100%;
+
+    @media (max-width: 500px) {
+      width: 100%;
+      flex-direction: column;
+    }
   }
 
   .submit-button{
@@ -63,6 +67,11 @@ const StyledApp = styled.div`
     height: 200px;
     background-color: white;
     margin: 0 10px;
+
+    @media (max-width: 500px) { 
+      width: 100%;
+      margin: 10px 0;
+    }
   }
 
   .file-upload-button:hover {
@@ -131,10 +140,49 @@ const StyledApp = styled.div`
   }
 
   .location-links {
-    margin: 0 10px;
+    margin: 0 10px 0 0;
+    @media (max-width: 768px) {
+      margin: 10px 0;
+    }
   }
-`;
 
+  .label-width {
+    width: 30%;
+    display: flex;
+    @media (max-width: 768px) {
+      width: 100%;
+    
+    }
+  }
+
+  .label-values {
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    @media (max-width: 768px) {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  .details-list {
+    flex-direction: row;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .travel-option {
+    flex-direction: row;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .travel-option-details {
+    width: 100%;
+  }
+`
 export function App() {
 
   const [formView, setFormView] = React.useState(true);

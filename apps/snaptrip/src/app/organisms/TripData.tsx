@@ -146,8 +146,8 @@ const TripData: React.FC<Props> = ({ tripData }) => {
                                                                
                                                                 <ListItem className="travel-option">
                                                                     
-                                                                    <ListItemText primary="Location" secondary={`${activity.Place}`} />
-                                                                    <ListItemText primary="TravelOption" secondary={`${activity.travelOption}`} />
+                                                                    <ListItemText className="travel-option-details" primary="Location" secondary={`${activity.Place}`} />
+                                                                    <ListItemText className="travel-option-details" primary="TravelOption" secondary={`${activity.travelOption}`} />
                                                                 </ListItem>
                                                             </List>
                                                         </ListItem>
@@ -164,42 +164,42 @@ const TripData: React.FC<Props> = ({ tripData }) => {
                                     <Grid item xs={12}>
                                         <List>
                                             {/* Display additional information for the day */}
-                                            <ListItem> <ListItemText><strong>Estimated Cost for the Day:</strong></ListItemText><ListItemText primary="Cost" secondary={`${day.EstimatedCostForDay} INR`} /></ListItem>
+                                            <ListItem> <ListItemText className='label-width'><strong>Estimated Cost for the Day</strong></ListItemText><ListItemText className='label-values'  primary={`${day.EstimatedCostForDay} INR`} /></ListItem>
                                             <Divider component="li" />
-                                            <ListItem>
-                                                <ListItemText><strong>Place to visit</strong></ListItemText>
+                                            <ListItem className='details-list'>
+                                                <ListItemText className='label-width'><strong>Place to visit</strong></ListItemText>
+                                                <Box className='label-values'>
                                                 {day.PlacesToVisit.map((place, index) => (
-                                                     <><Typography variant="body1" component="div" className="location-links">
+                                                     <><ListItemText className="location-links">
                                                         <a target="_blank" dangerouslySetInnerHTML={{ __html: place.place }} href={`http://127.0.0.1:5000/snaptrip/interestingFacts?location=${place.place},imagePath=${place.imageUrl}`} />
-                                                    </Typography>
-                                                    {/* <ListItemText key={index} primary={`Place ${index + 1}:`} secondary={`${`<span>${place.place}</span>`}`} /> */}
+                                                    </ListItemText>
+                                                   
                                                     </>
                                                 ))}
+                                                </Box>
                                             </ListItem>
-                                            {/* <ListItem><ListItemText primary="Places to Visit for the Day:" secondary={day.placesToVisit} /></ListItem> */}
                                             <Divider component="li" />
-                                            <ListItem>
-                                                <ListItemText><strong>Food Suggestion</strong></ListItemText>
+                                            <ListItem className='details-list'>
+                                                <ListItemText className='label-width'><strong>Food Suggestion</strong></ListItemText>
+                                                <Box className='label-values'>
                                                 {day.FoodSuggestion.map((food, index) => (
 
                                                     <ListItemText key={index} primary={food.RestaurantName} secondary={food.Dish} />
                                                 ))}
+                                                </Box>
                                             </ListItem>
-                                            {/* <ListItem><ListItemText primary="Food Suggestion for the Day:" secondary={day.FoodSuggestion} /></ListItem> */}
-
+                                            
                                             <Divider component="li" />
-                                            <ListItem>
-                                                <ListItemText><strong>Hotel  Suggestion</strong></ListItemText>
+                                            <ListItem className='details-list'> 
+                                                <ListItemText className='label-width'><strong>Hotel  Suggestion</strong></ListItemText>
+                                                <Box className='label-values'>
                                                 {day.HotelSuggestionForTheDay.map((hotel, index) => (
-
                                                     <ListItemText key={index} primary={hotel.HotelName} secondary={hotel.Address} />
-
                                                 ))}
+                                                </Box>
                                             </ListItem>
-                                            {/* <ListItem><ListItemText primary="Restaurant Suggestion for the Day:" secondary={day.restaurantSuggestion} /></ListItem> */}
                                             <Divider component="li" />
-                                            {/* <ListItem><ListItemText primary="Hotel Suggestion for the Day:" secondary={day.hotelSuggestionForTheDay} /></ListItem> */}
-                                        </List>
+                                            </List>
                                     </Grid>
                                 </Grid>
 
