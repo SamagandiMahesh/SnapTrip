@@ -55,7 +55,7 @@ const FileInput: React.FC<FileInputProps> = ({ control }) => {
           render={({ field }) => (
             <label htmlFor="upload-image" >
               <Button variant="contained" className="file-upload-button" component="span">
-                Upload
+                Upload Snap
               </Button>
               <input
                 id="upload-image"

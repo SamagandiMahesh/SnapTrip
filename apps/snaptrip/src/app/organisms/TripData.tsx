@@ -81,7 +81,6 @@ const TripData: React.FC<Props> = ({ tripData }) => {
                                         </section>
                                         <section className='hotel-address'>
                                             <IconButton aria-label="location">
-
                                                 <FontAwesomeIcon icon={faLocationDot} />
                                             </IconButton>
                                             <Typography variant="body1">{hotel.address}</Typography>

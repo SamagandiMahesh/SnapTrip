@@ -4,7 +4,6 @@ import TripData from "./organisms/TripData";
 
 import {tripDataMock} from './mocks/mock';
 import React from "react";
-import { set } from "lodash";
 
 const StyledApp = styled.div`
   font-family: sans-serif;
@@ -48,12 +47,28 @@ const StyledApp = styled.div`
   .file-input {
     display: flex;
     padding: 0;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .submit-button{
+    width: 100%;
+    height: 50px;
+    margin: 8px 0 16px 0;
   }
 
   .file-upload-button, .file-upload-image {
     width: 200px;
     height: 200px;
+    background-color: white;
+    margin: 0 10px;
+  }
+
+  .file-upload-button:hover {
+    background-color: #3f51b5;
+    color: white;
+  
   }
 
   .button-width-100 button {
@@ -62,7 +77,9 @@ const StyledApp = styled.div`
   }
 
   .margin-10 {
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
+    color: #fff;
+    text-align: center;
   }
 
   .itinerary-container {
@@ -93,6 +110,16 @@ const StyledApp = styled.div`
   .horizontal-divider {
     width: 100%;
     margin-top: 40px;
+  }
+
+  .card-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #37474f;
+  }
+
+  .card-container:hover {
+    // background-color: #d33a4c;
   }
 `;
 

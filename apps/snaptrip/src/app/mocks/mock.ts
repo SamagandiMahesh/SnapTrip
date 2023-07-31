@@ -1,5 +1,5 @@
 export const cityList = [
-    'Mumbai', 'Delhi', 'Bangalore', 'Chennai', 'Kolkata', 'Pune', 'Noida', 'NewYork', 'Japan', 'Germany', 'Brazil', 'Washington', 'Chicago'
+    'Mumbai', 'Delhi', 'Bangalore', 'Chennai', 'Kolkata', 'Pune', 'Noida',
 ]
 
 export const marks = [
