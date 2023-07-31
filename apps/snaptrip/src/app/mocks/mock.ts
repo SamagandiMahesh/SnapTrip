@@ -68,6 +68,8 @@ export const marks = [
 
 export const tripDataMock = {
     "summary": "Your trip to Kashmir will be for 1 week with a budget of 2 lacs. You will be starting from Pune.",
+    "BestTimeToVisit": "The best time to visit Amritsar is during the months of October to March when the weather is pleasant.",
+    
     "hotels": [
       {
         "name": "Marriott Hotel Srinagar",
@@ -202,6 +204,7 @@ export const tripDataMock = {
   
 export const tripDataMock2 = {
   "Summary": "Your trip to Amritsar will be for 2 days with a budget of 500,000 INR. You will visit important places in Amritsar and experience the local cuisine. The estimated cost for the trip is within your budget.",
+  "BestTimeToVisit": "The best time to visit Amritsar is during the months of October to March when the weather is pleasant.",
   "Hotels": [
       {
           "hotelName": "Amritsar Marriott Hotel",
