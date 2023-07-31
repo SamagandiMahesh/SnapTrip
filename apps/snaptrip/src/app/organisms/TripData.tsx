@@ -66,6 +66,7 @@ interface TripData {
     Hotels: Hotel[];
     Itinerary: Itinerary[];
     BestTimeToVisit: string;
+    Budget: string;
 }
 
 interface Props {
@@ -73,7 +74,7 @@ interface Props {
 }
 
 const TripData: React.FC<Props> = ({ tripData }) => {
-    const { Summary, Hotels, Itinerary, BestTimeToVisit } = tripData;
+    const { Summary, Hotels, Itinerary, BestTimeToVisit, Budget } = tripData;
 
     return (
         <Container maxWidth="md" >
@@ -81,6 +82,11 @@ const TripData: React.FC<Props> = ({ tripData }) => {
                 <Grid item xs={12}>
                     <Typography variant="h2" align="left">Summary</Typography>
                     <Typography align="left">{Summary}</Typography>
+                </Grid>
+                <Divider className='horizontal-divider' />
+                <Grid item xs={12}>
+                    <Typography variant="h2" align="left">Budget</Typography>
+                    <Typography align="left">{Budget}</Typography>
                 </Grid>
                 <Divider className='horizontal-divider' />
                 <Grid item xs={12}>
