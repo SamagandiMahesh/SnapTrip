@@ -281,7 +281,7 @@ export const tripDataMock2 = {
           "PlacesToVisit": [
               {
                   "place": "Golden Temple",
-                  "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day1-Golden_Temple-1690800631.jpg"
+                  "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day5-Maharaja_Ranjit_Singh_Panorama-1690809198.jpg"
               },
               {
                   "place": "Jallianwala Bagh",

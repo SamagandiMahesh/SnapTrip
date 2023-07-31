@@ -186,12 +186,12 @@ const StyledApp = styled.div`
 export function App() {
 
   const [formView, setFormView] = React.useState(true);
-  const [tripData, setTripData] = React.useState(tripDataMock2)
+  const [tripData, setTripData] = React.useState()
 
  const handleViewChange = (data: any) => {
   setFormView(!formView);
   console.log(data);
-  setTripData(tripDataMock2)
+  setTripData(data)
  }
 
    return (
@@ -201,7 +201,7 @@ export function App() {
       </header>
       <main>
         {formView && <TripForm handleViewChange={handleViewChange}/> }
-        {!formView && <TripData tripData={tripData}/> }
+        {!formView && tripData && <TripData tripData={tripData}/> }
       </main>
     </StyledApp>
   );

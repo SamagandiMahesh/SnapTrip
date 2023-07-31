@@ -23,10 +23,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed, faLocationDot, faMonument } from '@fortawesome/free-solid-svg-icons'
 
 interface Hotel {
-    hotelName: string;
-    address: string;
-    hotelLink: string;
-    mapLink: string;
+    HotelName: string;
+    Address: string;
+    Website: string;
+    MapLink: string;
 }
 
 interface Activity {
@@ -34,12 +34,12 @@ interface Activity {
     Activity: string;
     Place: string;
     BestTime: string;
-    travelOption: string;
+    TravelOption: string;
 }
 
 interface Itinerary {
     DayOfTheTrip: number;
-    activities: Activity[];
+    Activities: Activity[];
     EstimatedCostForDay: number;
     PlacesToVisit: PlacesToVisitData[];
     FoodSuggestion: FoodSuggestion[];
@@ -94,13 +94,13 @@ const TripData: React.FC<Props> = ({ tripData }) => {
                                             <IconButton aria-label="name">
                                                 <FontAwesomeIcon icon={faBed} />
                                             </IconButton>
-                                            <Typography variant="body1" ><a href={hotel.hotelLink} target='_blank'>{hotel.hotelName}</a></Typography>
+                                            <Typography variant="body1" ><a href={hotel.Website} target='_blank'>{hotel.HotelName}</a></Typography>
                                         </section>
                                         <section className='hotel-address'>
                                             <IconButton aria-label="location">
                                                 <FontAwesomeIcon icon={faLocationDot} />
                                             </IconButton>
-                                            <Typography variant="body1">{hotel.address}</Typography>
+                                            <Typography variant="body1">{hotel.Address}</Typography>
                                         </section>
                                     </CardContent>
                                 </Card>
@@ -126,7 +126,7 @@ const TripData: React.FC<Props> = ({ tripData }) => {
                                                 </AccordionSummary>
 
                                                 {/* Display activities */}
-                                                {day.activities.map((activity, activityIndex) => (
+                                                {day.Activities.map((activity, activityIndex) => (
                                                     <div key={activityIndex}>
                                                         <ListItem className="activities-list">
                                                             <List>
@@ -142,7 +142,7 @@ const TripData: React.FC<Props> = ({ tripData }) => {
                                                                 <ListItem className="travel-option">
                                                                     
                                                                     <ListItemText className="travel-option-details" primary="Location" secondary={`${activity.Place}`} />
-                                                                    <ListItemText className="travel-option-details" primary="TravelOption" secondary={`${activity.travelOption}`} />
+                                                                    <ListItemText className="travel-option-details" primary="TravelOption" secondary={`${activity.TravelOption}`} />
                                                                 </ListItem>
                                                             </List>
                                                         </ListItem>

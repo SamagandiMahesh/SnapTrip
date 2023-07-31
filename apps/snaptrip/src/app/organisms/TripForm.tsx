@@ -42,22 +42,29 @@ const TripForm: React.FC<ChildComponentProps> = ({ handleViewChange }) => {
             formData.append('inputImage', data.image[0]);
         }
         // const sourceLocation = cityList[Math.floor(Math.random() * cityList.length)];
-        const sourceLocation = 'gurgaon';
+        const sourceLocation = 'kolkata';
         formData.append('sourceLocation', sourceLocation);
-
-        handleViewChange(data);
-        return fetch("/api/recipes/create", {
-            method: "POST",
-            body: formData,
-          }).then((response) => {
+        //handleViewChange(data);
+        return fetch("http://127.0.0.1:5000/snaptrip", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => {
             if (response.ok) {
-              // Handle successful upload
-              handleViewChange(response.json());
+              return response.json(); // Parse the response body as JSON and return it
             } else {
-              // Handle error
-              console.log("Error uploading file.");
+              throw new Error("Error fetching data from the SnapTrip API.");
             }
+          })
+          .then((data) => {
+            // Handle successful response data here
+            handleViewChange(data);
+          })
+          .catch((error) => {
+            // Handle error
+            console.log("Error fetching data:", error.message);
           });
+          
     };
 
     return (
