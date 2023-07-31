@@ -41,11 +41,11 @@ const TripForm: React.FC<ChildComponentProps> = ({ handleViewChange }) => {
         if (data.image) {
             formData.append('inputImage', data.image[0]);
         }
-        const sourceLocation = cityList[Math.floor(Math.random() * cityList.length)];
-
+        // const sourceLocation = cityList[Math.floor(Math.random() * cityList.length)];
+        const sourceLocation = 'gurgaon';
         formData.append('sourceLocation', sourceLocation);
-      
 
+        handleViewChange(data);
         return fetch("/api/recipes/create", {
             method: "POST",
             body: formData,

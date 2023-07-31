@@ -23,32 +23,48 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBed, faLocationDot, faMonument } from '@fortawesome/free-solid-svg-icons'
 
 interface Hotel {
-    name: string;
+    hotelName: string;
     address: string;
+    hotelLink: string;
+    mapLink: string;
 }
 
 interface Activity {
-    fromTime: string;
-    toTime: string;
-    activity: string;
-    place: string;
+    Timings: string;
+    Activity: string;
+    Place: string;
+    BestTime: string;
     travelOption: string;
 }
 
 interface Itinerary {
-    day: string;
+    DayOfTheTrip: number;
     activities: Activity[];
-    estimatedCostForDay: string;
-    placesToVisit: string;
-    foodSuggestion: string;
-    restaurantSuggestion: string;
-    hotelSuggestionForTheDay: string;
+    EstimatedCostForDay: number;
+    PlacesToVisit: PlacesToVisitData[];
+    FoodSuggestion: FoodSuggestion[];
+    HotelSuggestionForTheDay: HotelSuggestionForTheDay[];
+}
+
+interface HotelSuggestionForTheDay {
+    HotelName: string;
+    Address: string;
+}
+
+interface FoodSuggestion {
+    RestaurantName: string;
+    Dish: string;
+}
+
+interface PlacesToVisitData {
+    place: string;
+    imageUrl: string;
 }
 
 interface TripData {
-    summary: string;
-    hotels: Hotel[];
-    itinerary: Itinerary[];
+    Summary: string;
+    Hotels: Hotel[];
+    Itinerary: Itinerary[];
 }
 
 interface Props {
@@ -56,20 +72,20 @@ interface Props {
 }
 
 const TripData: React.FC<Props> = ({ tripData }) => {
-    const { summary, hotels, itinerary } = tripData;
+    const { Summary, Hotels, Itinerary } = tripData;
 
     return (
         <Container maxWidth="md">
             <Grid container spacing={2} xs>
                 <Grid item xs={12}>
                     <Typography variant="h2" align="left">Summary</Typography>
-                    <Typography align="left">{summary}</Typography>
+                    <Typography align="left">{Summary}</Typography>
                 </Grid>
-                <Divider className='horizontal-divider'/>
+                <Divider className='horizontal-divider' />
                 <Grid item xs={12}>
                     <Typography align="left" variant="h2" >Hotels</Typography>
                     <Grid container spacing={2}>
-                        {hotels.map((hotel, index) => (
+                        {Hotels.map((hotel, index) => (
                             <Grid item xs={12} md={4} key={index}>
                                 <Card>
                                     <CardContent>
@@ -77,7 +93,7 @@ const TripData: React.FC<Props> = ({ tripData }) => {
                                             <IconButton aria-label="name">
                                                 <FontAwesomeIcon icon={faBed} />
                                             </IconButton>
-                                            <Typography variant="body1" >{hotel.name}</Typography>
+                                            <Typography variant="body1" ><a href={hotel.hotelLink} target='_blank'>{hotel.hotelName}</a></Typography>
                                         </section>
                                         <section className='hotel-address'>
                                             <IconButton aria-label="location">
@@ -91,59 +107,92 @@ const TripData: React.FC<Props> = ({ tripData }) => {
                         ))}
                     </Grid>
                 </Grid>
-                <Divider className='horizontal-divider'/>
+                <Divider className='horizontal-divider' />
                 <Grid item xs={12}>
                     <Typography variant="h2">Itinerary</Typography>
-                    {itinerary.map((day, index) => (
+                    {Itinerary.map((day, index) => (
                         <Accordion key={index}>
                             <AccordionSummary>
-                                <Typography variant="subtitle1" component="h3">{day.day} schedule</Typography>
+                                <Typography variant="h5" component="h3">Day {day.DayOfTheTrip} Schedule</Typography>
                             </AccordionSummary>
                             <AccordionDetails className='itinerary-container'>
                                 <Grid container spacing={2} xs={12} className='activity-container'>
-                                    <Grid item xs={12} md={6}>
-                                    <List >
-                                        <ListItem><ListItemText primary="Activities" /></ListItem>
-                                        <Divider component="li" />
-                                        
-                                        {/* Display activities */}
-                                       
-                                            {day.activities.map((activity, activityIndex) => (
-                                                <>
-                                                    <ListItem key={activityIndex}>
-                                                        <ListItemAvatar>
-                                                            <Avatar>
-                                                                <FontAwesomeIcon icon={faMonument} />
-                                                            </Avatar>
-                                                        </ListItemAvatar>
-                                                        <ListItemText primary={`${activity.fromTime} - ${activity.toTime}`} secondary={`${activity.activity}`} />
-                                                    </ListItem>
-                                                    <Divider component="li"  variant="inset"/>
-                                                </>
-                                            ))}
+                                    <Grid item xs={12} md={12}>
+                                        <List className="width-100">
+                                            <Accordion>
+                                                <AccordionSummary>
+                                                    <ListItemText><strong>Activities</strong></ListItemText>
+                                                </AccordionSummary>
+
+                                                {/* Display activities */}
+                                                {day.activities.map((activity, activityIndex) => (
+                                                    <div key={activityIndex}>
+                                                        <ListItem className="activities-list">
+                                                            <List>
+                                                                <ListItem key={activityIndex}>
+                                                                    <ListItemAvatar>
+                                                                        <Avatar>
+                                                                            <FontAwesomeIcon icon={faMonument} />
+                                                                        </Avatar>
+                                                                    </ListItemAvatar>
+                                                                    <ListItemText primary={activity.Timings} secondary={`${activity.Activity}`} />
+                                                                </ListItem>
+                                                               
+                                                                <ListItem className="travel-option">
+                                                                    
+                                                                    <ListItemText primary="Location" secondary={`${activity.Place}`} />
+                                                                    <ListItemText primary="TravelOption" secondary={`${activity.travelOption}`} />
+                                                                </ListItem>
+                                                            </List>
+                                                        </ListItem>
+                                                        <Divider component="li" />
+                                                    </div>
+                                                ))}
+                                            </Accordion>
                                         </List>
                                     </Grid>
-                                    <Divider orientation="vertical" flexItem />
-                                    <Grid item xs={12} md={5}>
-                                        <Typography variant="h6"><strong>Image</strong></Typography>
-                                        {/* Image upload component goes here */}
-                                        <img src="image_url_here" alt="Uploaded Image" />
-                                    </Grid>
+                                
                                 </Grid>
 
                                 <Grid container spacing={2} xs={12} className='details-container'>
                                     <Grid item xs={12}>
                                         <List>
-                                        {/* Display additional information for the day */}
-                                        <ListItem><ListItemText primary="Estimated Cost for the Day:" secondary={`${day.estimatedCostForDay} INR`} /></ListItem>
-                                        <Divider component="li" />
-                                        <ListItem><ListItemText primary="Places to Visit for the Day:" secondary={day.placesToVisit} /></ListItem>
-                                        <Divider component="li" />
-                                        <ListItem><ListItemText primary="Food Suggestion for the Day:" secondary={day.foodSuggestion} /></ListItem>
-                                        <Divider component="li" />
-                                        <ListItem><ListItemText primary="Restaurant Suggestion for the Day:" secondary={day.restaurantSuggestion} /></ListItem>
-                                        <Divider component="li" />
-                                        <ListItem><ListItemText primary="Hotel Suggestion for the Day:" secondary={day.hotelSuggestionForTheDay} /></ListItem>
+                                            {/* Display additional information for the day */}
+                                            <ListItem> <ListItemText><strong>Estimated Cost for the Day:</strong></ListItemText><ListItemText primary="Cost" secondary={`${day.EstimatedCostForDay} INR`} /></ListItem>
+                                            <Divider component="li" />
+                                            <ListItem>
+                                                <ListItemText><strong>Place to visit</strong></ListItemText>
+                                                {day.PlacesToVisit.map((place, index) => (
+                                                     <><Typography variant="body1" component="div" className="location-links">
+                                                        <a target="_blank" dangerouslySetInnerHTML={{ __html: place.place }} href={`http://127.0.0.1:5000/snaptrip/interestingFacts?location=${place.place},imagePath=${place.imageUrl}`} />
+                                                    </Typography>
+                                                    {/* <ListItemText key={index} primary={`Place ${index + 1}:`} secondary={`${`<span>${place.place}</span>`}`} /> */}
+                                                    </>
+                                                ))}
+                                            </ListItem>
+                                            {/* <ListItem><ListItemText primary="Places to Visit for the Day:" secondary={day.placesToVisit} /></ListItem> */}
+                                            <Divider component="li" />
+                                            <ListItem>
+                                                <ListItemText><strong>Food Suggestion</strong></ListItemText>
+                                                {day.FoodSuggestion.map((food, index) => (
+
+                                                    <ListItemText key={index} primary={food.RestaurantName} secondary={food.Dish} />
+                                                ))}
+                                            </ListItem>
+                                            {/* <ListItem><ListItemText primary="Food Suggestion for the Day:" secondary={day.FoodSuggestion} /></ListItem> */}
+
+                                            <Divider component="li" />
+                                            <ListItem>
+                                                <ListItemText><strong>Hotel  Suggestion</strong></ListItemText>
+                                                {day.HotelSuggestionForTheDay.map((hotel, index) => (
+
+                                                    <ListItemText key={index} primary={hotel.HotelName} secondary={hotel.Address} />
+
+                                                ))}
+                                            </ListItem>
+                                            {/* <ListItem><ListItemText primary="Restaurant Suggestion for the Day:" secondary={day.restaurantSuggestion} /></ListItem> */}
+                                            <Divider component="li" />
+                                            {/* <ListItem><ListItemText primary="Hotel Suggestion for the Day:" secondary={day.hotelSuggestionForTheDay} /></ListItem> */}
                                         </List>
                                     </Grid>
                                 </Grid>

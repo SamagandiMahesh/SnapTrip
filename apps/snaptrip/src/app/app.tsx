@@ -2,7 +2,7 @@ import styled from "styled-components";
 import TripForm from "./organisms/TripForm";
 import TripData from "./organisms/TripData";
 
-import {tripDataMock} from './mocks/mock';
+import {tripDataMock, tripDataMock2} from './mocks/mock';
 import React from "react";
 
 const StyledApp = styled.div`
@@ -121,17 +121,29 @@ const StyledApp = styled.div`
   .card-container:hover {
     // background-color: #d33a4c;
   }
+
+  .activities-list p {
+    text-align: left;
+  }
+
+  .width-100, .width-100 li, .width-100 ul {
+    width: 100%;
+  }
+
+  .location-links {
+    margin: 0 10px;
+  }
 `;
 
 export function App() {
 
   const [formView, setFormView] = React.useState(true);
-  const [tripData, setTripData] = React.useState(tripDataMock)
+  const [tripData, setTripData] = React.useState(tripDataMock2)
 
  const handleViewChange = (data: any) => {
   setFormView(!formView);
   console.log(data);
-  setTripData(tripDataMock)
+  setTripData(tripDataMock2)
  }
 
    return (
