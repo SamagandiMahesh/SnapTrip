@@ -80,7 +80,7 @@ const TripForm: React.FC<ChildComponentProps> = ({ handleViewChange }) => {
 
                     
                     <Button type="submit" variant="contained" color="primary" className='submit-button'>
-                        Submit
+                        Get Itinerary
                     </Button>
 
                 </form>
