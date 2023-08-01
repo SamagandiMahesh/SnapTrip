@@ -124,6 +124,7 @@ const StyledApp = styled.div`
   .card-container {
     margin: 20px;
     padding: 20px;
+    position: relative;
   }
 
   .card-container:hover {
@@ -181,6 +182,27 @@ const StyledApp = styled.div`
   .travel-option-details {
     width: 100%;
   }
+
+  .loader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .loader {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    /* Add your custom styles for the loader */
+  }
+
 `
 export function App() {
 
