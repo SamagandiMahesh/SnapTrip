@@ -2,7 +2,7 @@ import styled from "styled-components";
 import TripForm from "./organisms/TripForm";
 import TripData from "./organisms/TripData";
 
-import {tripDataMock, tripDataMock2} from './mocks/mock';
+import {tripDataMock, tripDataMock2, tripDataMock3} from './mocks/mock';
 import React from "react";
 
 const StyledApp = styled.div`
@@ -186,12 +186,12 @@ const StyledApp = styled.div`
 export function App() {
 
   const [formView, setFormView] = React.useState(true);
-  const [tripData, setTripData] = React.useState()
+  const [tripData, setTripData] = React.useState(tripDataMock3)
 
  const handleViewChange = (data: any) => {
   setFormView(!formView);
   console.log(data);
-  setTripData(data)
+  setTripData(tripDataMock3)
  }
 
    return (

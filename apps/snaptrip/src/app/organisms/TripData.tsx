@@ -26,21 +26,21 @@ interface Hotel {
     HotelName: string;
     Address: string;
     Website: string;
-    MapLink: string;
+    MapLink?: string;
 }
 
 interface Activity {
     Timings: string;
     Activity: string;
     Place: string;
-    BestTime: string;
+    BestTime?: string;
     TravelOption: string;
 }
 
 interface Itinerary {
-    DayOfTheTrip: number;
+    DayOfTheTrip: string | number;
     Activities: Activity[];
-    EstimatedCostForDay: number;
+    EstimatedCostForDay: string | number;
     PlacesToVisit: PlacesToVisitData[];
     FoodSuggestion: FoodSuggestion[];
     HotelSuggestionForTheDay: HotelSuggestionForTheDay[];
@@ -120,7 +120,7 @@ const TripData: React.FC<Props> = ({ tripData }) => {
                     {Itinerary.map((day, index) => (
                         <Accordion key={index}>
                             <AccordionSummary>
-                                <Typography variant="h5" component="h3">Day {day.DayOfTheTrip} Schedule</Typography>
+                                <Typography variant="h5" component="h3">{day.DayOfTheTrip} Schedule</Typography>
                             </AccordionSummary>
                             <AccordionDetails className='itinerary-container'>
                                 <Grid container spacing={2} xs={12} className='activity-container'>

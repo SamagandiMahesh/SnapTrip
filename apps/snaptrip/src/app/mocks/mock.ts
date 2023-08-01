@@ -377,3 +377,273 @@ export const tripDataMock2 = {
       }
   ]
 }
+
+export const tripDataMock3 = {
+    "BestTimeToVisit": "The best time to visit Hitachinaka is during the spring season, particularly in April when the Hitachi Seaside Park is in full bloom with beautiful flowers.",
+    "Budget": "The estimated cost for this trip is 500000 INR.",
+    "Hotels": [
+        {
+            "Address": "123 ABC Street, Hitachinaka, Japan",
+            "Website": "https://www.marriott.com/hotels/hitachinaka-seaside-hotel",
+            "HotelName": "Hitachinaka Seaside Hotel"
+        },
+        {
+            "Address": "456 XYZ Street, Hitachinaka, Japan",
+            "Website": "https://www.marriott.com/hotels/hitachinaka-onsen-hotel",
+            "HotelName": "Hitachinaka Onsen Hotel"
+        }
+    ],
+    "Itinerary": [
+        {
+            "Activities": [
+                {
+                    "Activity": "Visit Hitachi Seaside Park",
+                    "Place": "Hitachi Seaside Park, Hitachinaka, Japan",
+                    "Timings": "9:00 AM - 11:00 AM",
+                    "TravelOption": "Taxi"
+                },
+                {
+                    "Activity": "Lunch at Sakura Restaurant",
+                    "Place": "Sakura Restaurant, Hitachinaka, Japan",
+                    "Timings": "12:00 PM - 2:00 PM",
+                    "TravelOption": "Walking"
+                },
+                {
+                    "Activity": "Explore Mito City",
+                    "Place": "Mito City, Ibaraki, Japan",
+                    "Timings": "3:00 PM - 5:00 PM",
+                    "TravelOption": "Train"
+                }
+            ],
+            "DayOfTheTrip": "Day 1",
+            "EstimatedCostForDay": "Approximately 15000 INR",
+            "FoodSuggestion": [
+                {
+                    "Dish": "Sushi",
+                    "RestaurantName": "Sakura Restaurant"
+                },
+                {
+                    "Dish": "Ramen",
+                    "RestaurantName": "Ramen House"
+                }
+            ],
+            "HotelSuggestionForTheDay": [
+                {
+                    "Address": "123 ABC Street, Hitachinaka, Japan",
+                    "HotelName": "Hitachinaka Seaside Hotel"
+                }
+            ],
+            "PlacesToVisit": [
+                {
+                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day1-Hitachi_Seaside_Park-1690872942.jpg",
+                    "place": "Hitachi Seaside Park"
+                },
+                {
+                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day1-Mito_City-1690872942.jpg",
+                    "place": "Mito City"
+                }
+            ]
+        },
+        {
+            "Activities": [
+                {
+                    "Activity": "Visit Kairakuen Garden",
+                    "Place": "Kairakuen Garden, Mito, Japan",
+                    "Timings": "9:00 AM - 11:00 AM",
+                    "TravelOption": "Taxi"
+                },
+                {
+                    "Activity": "Lunch at Ume Cafe",
+                    "Place": "Ume Cafe, Mito, Japan",
+                    "Timings": "12:00 PM - 2:00 PM",
+                    "TravelOption": "Walking"
+                },
+                {
+                    "Activity": "Explore Hitachi Seaside Park",
+                    "Place": "Hitachi Seaside Park, Hitachinaka, Japan",
+                    "Timings": "3:00 PM - 5:00 PM",
+                    "TravelOption": "Train"
+                }
+            ],
+            "DayOfTheTrip": "Day 2",
+            "EstimatedCostForDay": "Approximately 18000 INR",
+            "FoodSuggestion": [
+                {
+                    "Dish": "Matcha Green Tea",
+                    "RestaurantName": "Ume Cafe"
+                },
+                {
+                    "Dish": "Tempura",
+                    "RestaurantName": "Tempura House"
+                }
+            ],
+            "HotelSuggestionForTheDay": [
+                {
+                    "Address": "456 XYZ Street, Hitachinaka, Japan",
+                    "HotelName": "Hitachinaka Onsen Hotel"
+                }
+            ],
+            "PlacesToVisit": [
+                {
+                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day2-Kairakuen_Garden-1690872942.jpg",
+                    "place": "Kairakuen Garden"
+                },
+                {
+                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day2-Hitachi_Seaside_Park-1690872942.jpg",
+                    "place": "Hitachi Seaside Park"
+                }
+            ]
+        },
+        {
+            "Activities": [
+                {
+                    "Activity": "Visit Nakaminato Fish Market",
+                    "Place": "Nakaminato Fish Market, Hitachinaka, Japan",
+                    "Timings": "9:00 AM - 11:00 AM",
+                    "TravelOption": "Taxi"
+                },
+                {
+                    "Activity": "Lunch at Sushi Bar",
+                    "Place": "Sushi Bar, Hitachinaka, Japan",
+                    "Timings": "12:00 PM - 2:00 PM",
+                    "TravelOption": "Walking"
+                },
+                {
+                    "Activity": "Relax at Ajigaura Beach",
+                    "Place": "Ajigaura Beach, Hitachinaka, Japan",
+                    "Timings": "3:00 PM - 5:00 PM",
+                    "TravelOption": "Bus"
+                }
+            ],
+            "DayOfTheTrip": "Day 3",
+            "EstimatedCostForDay": "Approximately 17000 INR",
+            "FoodSuggestion": [
+                {
+                    "Dish": "Sashimi",
+                    "RestaurantName": "Sushi Bar"
+                },
+                {
+                    "Dish": "Yakitori",
+                    "RestaurantName": "Yakitori House"
+                }
+            ],
+            "HotelSuggestionForTheDay": [
+                {
+                    "Address": "123 ABC Street, Hitachinaka, Japan",
+                    "HotelName": "Hitachinaka Seaside Hotel"
+                }
+            ],
+            "PlacesToVisit": [
+                {
+                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day3-Nakaminato_Fish_Market-1690872942.jpg",
+                    "place": "Nakaminato Fish Market"
+                },
+                {
+                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day3-Ajigaura_Beach-1690872942.jpg",
+                    "place": "Ajigaura Beach"
+                }
+            ]
+        },
+        {
+            "Activities": [
+                {
+                    "Activity": "Visit Hitachi Civic Center Observatory",
+                    "Place": "Hitachi Civic Center Observatory, Hitachinaka, Japan",
+                    "Timings": "9:00 AM - 11:00 AM",
+                    "TravelOption": "Taxi"
+                },
+                {
+                    "Activity": "Lunch at Okonomiyaki House",
+                    "Place": "Okonomiyaki House, Hitachinaka, Japan",
+                    "Timings": "12:00 PM - 2:00 PM",
+                    "TravelOption": "Walking"
+                },
+                {
+                    "Activity": "Explore Mito City",
+                    "Place": "Mito City, Ibaraki, Japan",
+                    "Timings": "3:00 PM - 5:00 PM",
+                    "TravelOption": "Train"
+                }
+            ],
+            "DayOfTheTrip": "Day 4",
+            "EstimatedCostForDay": "Approximately 16000 INR",
+            "FoodSuggestion": [
+                {
+                    "Dish": "Okonomiyaki",
+                    "RestaurantName": "Okonomiyaki House"
+                },
+                {
+                    "Dish": "Soba Noodles",
+                    "RestaurantName": "Soba House"
+                }
+            ],
+            "HotelSuggestionForTheDay": [
+                {
+                    "Address": "456 XYZ Street, Hitachinaka, Japan",
+                    "HotelName": "Hitachinaka Onsen Hotel"
+                }
+            ],
+            "PlacesToVisit": [
+                {
+                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day4-Hitachi_Civic_Center_Observatory-1690872942.jpg",
+                    "place": "Hitachi Civic Center Observatory"
+                },
+                {
+                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day4-Mito_City-1690872942.jpg",
+                    "place": "Mito City"
+                }
+            ]
+        },
+        {
+            "Activities": [
+                {
+                    "Activity": "Visit Hitachi Seaside Park",
+                    "Place": "Hitachi Seaside Park, Hitachinaka, Japan",
+                    "Timings": "9:00 AM - 11:00 AM",
+                    "TravelOption": "Taxi"
+                },
+                {
+                    "Activity": "Lunch at Ramen House",
+                    "Place": "Ramen House, Hitachinaka, Japan",
+                    "Timings": "12:00 PM - 2:00 PM",
+                    "TravelOption": "Walking"
+                },
+                {
+                    "Activity": "Explore Nakaminato Fish Market",
+                    "Place": "Nakaminato Fish Market, Hitachinaka, Japan",
+                    "Timings": "3:00 PM - 5:00 PM",
+                    "TravelOption": "Bus"
+                }
+            ],
+            "DayOfTheTrip": "Day 5",
+            "EstimatedCostForDay": "Approximately 15000 INR",
+            "FoodSuggestion": [
+                {
+                    "Dish": "Tonkotsu Ramen",
+                    "RestaurantName": "Ramen House"
+                },
+                {
+                    "Dish": "Sushi",
+                    "RestaurantName": "Sushi Bar"
+                }
+            ],
+            "HotelSuggestionForTheDay": [
+                {
+                    "Address": "123 ABC Street, Hitachinaka, Japan",
+                    "HotelName": "Hitachinaka Seaside Hotel"
+                }
+            ],
+            "PlacesToVisit": [
+                {
+                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day5-Hitachi_Seaside_Park-1690872942.jpg",
+                    "place": "Hitachi Seaside Park"
+                },
+                {
+                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day5-Nakaminato_Fish_Market-1690872942.jpg",
+                    "place": "Nakaminato Fish Market"
+                }
+            ]
+        }
+    ],
+    "Summary": "This is a 5-day trip to Hitachinaka from Gurugram. The itinerary includes various activities and places to visit, along with suggested local restaurants and highly rated Marriott hotels."
+}
