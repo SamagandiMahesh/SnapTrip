@@ -80,16 +80,6 @@ const TripData: React.FC<Props> = ({ tripData }) => {
         <Container maxWidth="md" >
             <Grid container spacing={2} xs>
                 <Grid item xs={12}>
-                    <Typography variant="h2" align="left">Summary</Typography>
-                    <Typography align="left">{Summary}</Typography>
-                </Grid>
-                <Divider className='horizontal-divider' />
-                <Grid item xs={12}>
-                    <Typography variant="h2" align="left">Budget</Typography>
-                    <Typography align="left">{Budget}</Typography>
-                </Grid>
-                <Divider className='horizontal-divider' />
-                <Grid item xs={12}>
                     <Typography align="left" variant="h2" >Hotels</Typography>
                     <Grid container spacing={2}>
                         {Hotels.map((hotel, index) => (
@@ -207,6 +197,16 @@ const TripData: React.FC<Props> = ({ tripData }) => {
                             </AccordionDetails>
                         </Accordion>
                     ))}
+                </Grid>
+                <Divider className='horizontal-divider' />
+                <Grid item xs={12}>
+                    <Typography variant="h2" align="left">Summary</Typography>
+                    <Typography align="left">{Summary}</Typography>
+                </Grid>
+                <Divider className='horizontal-divider' />
+                <Grid item xs={12}>
+                    <Typography variant="h2" align="left">Budget</Typography>
+                    <Typography align="left">{Budget}</Typography>
                 </Grid>
                 <Divider className='horizontal-divider' />
                 <Grid item xs={12}>
