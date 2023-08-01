@@ -124,7 +124,6 @@ const StyledApp = styled.div`
   .card-container {
     margin: 20px;
     padding: 20px;
-    background-color: #37474f;
   }
 
   .card-container:hover {
