@@ -1,0 +1,22 @@
+.place-image-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.place-image {
+    max-width: 200px;
+    max-height: 150px;
+    margin: 5px;
+    object-fit: cover;
+}
+
+.carousel .control-dots {
+    text-align: center;
+  }
+  
+  
+  
+  
+  

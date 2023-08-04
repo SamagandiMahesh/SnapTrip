@@ -59,19 +59,19 @@ const TripForm: React.FC<ChildComponentProps> = ({ handleViewChange }) => {
   };
 
   const onSubmit = (data: Record<string, any>) => {
-    // setLoading(true);
+    setLoading(true);
     const formData = new FormData();
     if (data.image) {
       formData.append('inputImage', data.image[0]);
     }
     // const sourceLocation = cityList[Math.floor(Math.random() * cityList.length)];
-    const sourceLocation = 'kolkata';
+    const sourceLocation = 'gurgaon';
     formData.append('sourceLocation', sourceLocation);
-    formData.append('duration', data.duration);
+    formData.append('tripDuration', data.duration);
     formData.append('budget', data.budget);
     formData.append('budgetCurrency', data.budgetCurrency);
-    handleSubmitWithLoader(data);
-    return fetch("http://127.0.0.1:5000/snaptrip", {
+    //handleSubmitWithLoader(data);
+    return fetch("http://127.0.0.1:5000/stub/snaptrip", {
       method: "POST",
       body: formData,
     })
@@ -91,7 +91,7 @@ const TripForm: React.FC<ChildComponentProps> = ({ handleViewChange }) => {
         console.log("Error fetching data:", error.message);
       })
       .finally(() => {
-        // setLoading(false); // Stop the loading state regardless of success or error
+        setLoading(false); // Stop the loading state regardless of success or error
       });
 
   };

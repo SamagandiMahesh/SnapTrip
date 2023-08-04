@@ -207,12 +207,12 @@ const StyledApp = styled.div`
 export function App() {
 
   const [formView, setFormView] = React.useState(true);
-  const [tripData, setTripData] = React.useState(tripDataMock3)
+  const [tripData, setTripData] = React.useState()
 
  const handleViewChange = (data: any) => {
   setFormView(!formView);
   console.log(data);
-  setTripData(tripDataMock3)
+  setTripData(data)
  }
 
    return (

@@ -391,6 +391,11 @@ export const tripDataMock3 = {
             "Address": "456 XYZ Street, Hitachinaka, Japan",
             "Website": "https://www.marriott.com/hotels/hitachinaka-onsen-hotel",
             "HotelName": "Hitachinaka Onsen Hotel"
+        },
+        {
+            "Address": "456 XYZ Street, Hitachinaka, Japan",
+            "Website": "https://www.marriott.com/en-us/hotels/tyoal-aloft-tokyo-ginza",
+            "HotelName": "Aloft Tokyo Ginza"
         }
     ],
     "Itinerary": [
@@ -419,11 +424,11 @@ export const tripDataMock3 = {
             "EstimatedCostForDay": "Approximately 15000 INR",
             "FoodSuggestion": [
                 {
-                    "Dish": "Sushi",
+                    "FamousDish": "Sushi",
                     "RestaurantName": "Sakura Restaurant"
                 },
                 {
-                    "Dish": "Ramen",
+                    "FamousDish": "Ramen",
                     "RestaurantName": "Ramen House"
                 }
             ],
@@ -435,12 +440,12 @@ export const tripDataMock3 = {
             ],
             "PlacesToVisit": [
                 {
-                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day1-Hitachi_Seaside_Park-1690872942.jpg",
-                    "place": "Hitachi Seaside Park"
+                    "ImageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day1-Hitachi_Seaside_Park-1690872942.jpg",
+                    "Place": "Hitachi Seaside Park"
                 },
                 {
-                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day1-Mito_City-1690872942.jpg",
-                    "place": "Mito City"
+                    "ImageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day1-Mito_City-1690872942.jpg",
+                    "Place": "Mito City"
                 }
             ]
         },
@@ -469,11 +474,11 @@ export const tripDataMock3 = {
             "EstimatedCostForDay": "Approximately 18000 INR",
             "FoodSuggestion": [
                 {
-                    "Dish": "Matcha Green Tea",
+                    "FamousDish": "Matcha Green Tea",
                     "RestaurantName": "Ume Cafe"
                 },
                 {
-                    "Dish": "Tempura",
+                    "FamousDish": "Tempura",
                     "RestaurantName": "Tempura House"
                 }
             ],
@@ -485,12 +490,12 @@ export const tripDataMock3 = {
             ],
             "PlacesToVisit": [
                 {
-                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day2-Kairakuen_Garden-1690872942.jpg",
-                    "place": "Kairakuen Garden"
+                    "ImageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day2-Kairakuen_Garden-1690872942.jpg",
+                    "Place": "Kairakuen Garden"
                 },
                 {
-                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day2-Hitachi_Seaside_Park-1690872942.jpg",
-                    "place": "Hitachi Seaside Park"
+                    "ImageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day2-Hitachi_Seaside_Park-1690872942.jpg",
+                    "Place": "Hitachi Seaside Park"
                 }
             ]
         },
@@ -519,11 +524,11 @@ export const tripDataMock3 = {
             "EstimatedCostForDay": "Approximately 17000 INR",
             "FoodSuggestion": [
                 {
-                    "Dish": "Sashimi",
+                    "FamousDish": "Sashimi",
                     "RestaurantName": "Sushi Bar"
                 },
                 {
-                    "Dish": "Yakitori",
+                    "FamousDish": "Yakitori",
                     "RestaurantName": "Yakitori House"
                 }
             ],
@@ -535,12 +540,12 @@ export const tripDataMock3 = {
             ],
             "PlacesToVisit": [
                 {
-                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day3-Nakaminato_Fish_Market-1690872942.jpg",
-                    "place": "Nakaminato Fish Market"
+                    "ImageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day3-Nakaminato_Fish_Market-1690872942.jpg",
+                    "Place": "Nakaminato Fish Market"
                 },
                 {
-                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day3-Ajigaura_Beach-1690872942.jpg",
-                    "place": "Ajigaura Beach"
+                    "ImageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day3-Ajigaura_Beach-1690872942.jpg",
+                    "Place": "Ajigaura Beach"
                 }
             ]
         },
@@ -569,11 +574,11 @@ export const tripDataMock3 = {
             "EstimatedCostForDay": "Approximately 16000 INR",
             "FoodSuggestion": [
                 {
-                    "Dish": "Okonomiyaki",
+                    "FamousDish": "Okonomiyaki",
                     "RestaurantName": "Okonomiyaki House"
                 },
                 {
-                    "Dish": "Soba Noodles",
+                    "FamousDish": "Soba Noodles",
                     "RestaurantName": "Soba House"
                 }
             ],
@@ -585,12 +590,12 @@ export const tripDataMock3 = {
             ],
             "PlacesToVisit": [
                 {
-                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day4-Hitachi_Civic_Center_Observatory-1690872942.jpg",
-                    "place": "Hitachi Civic Center Observatory"
+                    "ImageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day4-Hitachi_Civic_Center_Observatory-1690872942.jpg",
+                    "Place": "Hitachi Civic Center Observatory"
                 },
                 {
-                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day4-Mito_City-1690872942.jpg",
-                    "place": "Mito City"
+                    "ImageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day4-Mito_City-1690872942.jpg",
+                    "Place": "Mito City"
                 }
             ]
         },
@@ -619,11 +624,11 @@ export const tripDataMock3 = {
             "EstimatedCostForDay": "Approximately 15000 INR",
             "FoodSuggestion": [
                 {
-                    "Dish": "Tonkotsu Ramen",
+                    "FamousDish": "Tonkotsu Ramen",
                     "RestaurantName": "Ramen House"
                 },
                 {
-                    "Dish": "Sushi",
+                    "FamousDish": "Sushi",
                     "RestaurantName": "Sushi Bar"
                 }
             ],
@@ -635,12 +640,12 @@ export const tripDataMock3 = {
             ],
             "PlacesToVisit": [
                 {
-                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day5-Hitachi_Seaside_Park-1690872942.jpg",
-                    "place": "Hitachi Seaside Park"
+                    "ImageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day5-Hitachi_Seaside_Park-1690872942.jpg",
+                    "Place": "Hitachi Seaside Park"
                 },
                 {
-                    "imageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day5-Nakaminato_Fish_Market-1690872942.jpg",
-                    "place": "Nakaminato Fish Market"
+                    "ImageUrl": "https://ps-tourist-places.s3.amazonaws.com/Day5-Nakaminato_Fish_Market-1690872942.jpg",
+                    "Place": "Nakaminato Fish Market"
                 }
             ]
         }
